@@ -9,15 +9,17 @@
     <link rel="shortcut icon" href="./calculadora.png" type="image/x-icon">
   </head>
   <body>
-    <h1>Calculadora IMC</h1>
+    <header>
+    <h1>Calculadora IMC</h1></header>
+    <main>
     <div class="calc">
       <h2>Insira seus dados aqui para saber seu IMC!</h2>
       <label for="altura">Sua altura: </label>
-      <input type="number" name="altura" id="altura" />
+      <input type="number" name="altura" id="altura" required/>
       <br />
       <br />
       <label for="peso">Seu peso: </label>
-      <input type="number" name="peso" id="peso" />
+      <input type="number" name="peso" id="peso" required/>
       <br />
       <br />
       <button onclick="calcular()" class="btn">Calcular</button>
@@ -26,7 +28,7 @@
       <h3>Resultado:</h3>
       <span id="resultado"></span>
     </div>
-   
+  </main>
     <script>
       function calcular() {
         let peso = document.getElementById("peso").value;
